@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Playpen+Sans:wght@300&family=Tajawal:wght@300&display=swap');
+body{
+    background-color: #1f242d;
+    color: white;
+   font-family:'Tajawal', Arial, Helvetica, sans-serif;
+   scale:1.1;
+   margin-top:4vh;
+   overflow-x: hidden;
+   
+}
+
+nav{
+    overflow: hidden;
+}
+p{
+    font-family: 'Tajawal',Arial, Helvetica, sans-serif;
+}
+section{
+    overflow-x: hidden;
+    padding-top: 10vh;
+}
+section div h1{
+    font-weight: bold;
+}
+h1,p{
+    position: relative;
+    transition: 1s;
+}
+.sec-1#showanimate .writeAnimate{
+    width: 0;
+}
+.sec-1 .writeAnimate{
+    position: absolute; 
+    background-color:#1f242d;
+     height: 105%;
+     bottom: 0;
+     top:-5;
+      right: 0;
+      width: 0;
+   animation: showTxt 4s;
+}
+.sec-1 .writeAnimate2{
+    position: absolute; 
+    background-color:#1f242d;
+    height: 100%;
+     bottom: -5;
+      right: 0;
+      width: 0;
+   animation: showTxt 2s;
+}
+
+
+div{
+    text-align: center;
+}
+.searchBarDiv{
+    position: relative;
+}
+div input{
+    border:none;
+    border-radius: 0.5rem;
+    padding:0.4rem;
+    padding-left: 0.5rem;
+    text-align: end;
+    position: relative;
+}
+.search{
+    border: none;
+    padding: 0.5rem;
+    border-left: 0.5rem;
+    background: none;
+    position: absolute;
+    top:10%;
+    left: 38.5%;
+    z-index: 10;
+}
+label{
+    padding: 1.5vh;
+    font-family: 'Tajawal',Arial, Helvetica, sans-serif;
+    display: block;
+}
+
+select{
+padding: 0.5rem;
+border: none;
+border-radius: 0.5rem;
+text-align: end;
+}
+section form div button {
+    border: none;
+    padding: 0.5rem;
+    background: black;
+    color: white;
+    border-radius:1rem ;
+    font-weight: bold;
+    transition: 0.2s;
+}
+section form div button:hover{
+    scale: 1.1;
+}
+section form div button:active{
+    scale: 0.9;
+}
+.pageContainer{
+  overflow-x: hidden;
+}
+a{
+  text-decoration: none;
+  color:white;
+}
+a:active{
+  scale: 1.05;
+  color:white;
+}
+
+.infoMsgBody{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background: rgba(0,0,0,0.5);
+  z-index: 10;
+}
+.infoMsgBody .closeMsg{
+  position: absolute;
+  top:40;
+  right:30;
+}
+.closeMsg button {
+  border: none;
+  background: none;
+  color: white;
+}
+.closeMsg button:active{
+  scale: 1.2;
+}
+.closeMsg button:hover{
+  scale: 1.1;
+}
+.msgImg img{
+  width:80%;
+  object-fit: contain;
+}
+table,th,td{
+  border: 1px solid black;
+}
+
+.result div p {
+  padding: 1rem;
+  display: inline-block;
+} 
+.result{
+  margin-top: 2vh;
+  padding: 4vh;
+  border-radius:2rem ;
+  background-color: black;
+}
+@keyframes showTxt{
+    0%{
+       width: 100%;
+    }
+    100%{
+        width: 0%;
+    }
+    
+}
