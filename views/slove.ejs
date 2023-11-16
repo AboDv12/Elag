@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العلاج</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="pageContainer">
+        <nav class="nav p-4 row align-items-center justify-content-center " style="border-bottom: 1px solid gray;">
+         <div class="row justify-content-start align-items-center col-lg-6 col-6 me-4">
+           <p class="h2 col-lg-6">طبي</p>
+         </div> 
+         
+          <div class="col-lg-3 col-6 row align-items-center justify-content-end header " id="header">
+           <a class="col-lg-6 col-12" href="https://wa.me/+201552392922">تواصل</a>
+           <a class="col-lg-6 col-12" id="info" style="cursor: pointer;">معلومات</a>
+          </div>
+        </nav> 
+        <section class="row align-items-center justify-content-center " >
+           <div class="row justify-content-start align-items-end p-3">
+        <a class="col-2"href='/' style='cursor: none;'>
+            <img src="./images/back-50.png" alt="back img" id="back">
+        </a>
+            
+           </div>
+            <p class="display-6">العلاج</p>
+
+            <div class="result col-lg-5 col-10 " >
+                <div>
+                    <p class="h2">نسبة السكر : </p>
+                    <p class="h2"><%= body.SugerPersent %></p>
+                </div>
+                <div>
+                    <p class="h2">الوزن : </p>
+                    <p class="h2"><%= body.weight %>KG</p>
+                </div>
+                <div>
+                    <p class="h2">العلاج : </p>
+                    <p class="h2"><%= data.slove %>ml</p>
+
+                </div>
+            </div>
+            <div id='infoMsgBody'>
+
+            </div>
+
+       <!--  <table class="col-lg-2">
+                <tr>
+                  <th>نسبة السكر</th>
+                  <th>العلاج بالملى</th>
+                </tr>
+                <tr>
+                    <td>50%</td>
+                    <td>100 Aloe vera gel</td>   
+                </tr>
+            </table>
+        -->   
+
+   
+        </section>
+  
+
+    <script src="./styles/bootstrap.bundle.min.js"></script>
+    <script>
+        const info = document.getElementById("info");
+        console.log(info)
+        const imb = document.getElementById("infoMsgBody");
+        info.onclick =()=>{
+          
+          imb.classList.add("infoMsgBody")
+          let closeMsg = document.createElement("div");
+          closeMsg.id = "closeMsg";
+          closeMsg.classList.add("closeMsg")
+          let closeBtn = document.createElement("button");
+          let closeImg = document.createElement("img");
+          closeImg.src="../images/exit.png"
+         closeBtn.id = 'closeBtn'
+          closeBtn.appendChild(closeImg)
+          imb.appendChild(closeMsg);
+          closeMsg.appendChild(closeBtn);
+          closeBtn.classList.add("p-4");
+          let imgMsg = document.createElement("div");
+          imgMsg.classList.add("msgImg","row","align-items-center","justify-content-center","py-5");
+          let img = document.createElement("img");
+          img.src ="../images/guide.jpg";
+          imb.appendChild(imgMsg)
+          imgMsg.appendChild(img)
+          console.log(imgMsg)
+          closeBtn.onclick = ()=>{
+            closeMsg.remove();
+            closeBtn.remove();
+            imgMsg.remove();
+            img.remove();
+            imb.classList.remove("infoMsgBody")
+          }
+        }
+      </script>
+   </body>
+</body>
+<footer class="row align-items-center justify-content-center mt-5">
+    <div style="background:Black" class="p-2">
+      <p>
+         En/Abdalrhman Mohamed Omar
+      </p>
+      <p>
+        Dr/Mariam Abo AlHassan saad
+      </p>
+    </div>
+  </footer>
+
+</html>

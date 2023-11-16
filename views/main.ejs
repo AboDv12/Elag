@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Abood">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+<div class="pageContainer">
+    <nav class="nav p-4 row align-items-center justify-content-center mx-4 ">
+     <div class="row justify-content-start align-items-center col-lg-6 col-6 me-4">
+       <p class="h2 col-lg-6">طبي</p>
+     </div> 
+     
+      <div class="col-lg-3 col-6 row align-items-center justify-content-end header " id="header">
+       <a class="col-lg-6 col-12" href="https://wa.me/+201552392922">تواصل</a>
+       <a class="col-lg-6 col-12" id="info">معلومات</a>
+      </div>
+    </nav> 
+    <section class="row align-items-center justify-content-center sec-1">
+         <div class="row align-items-center justify-content-center col-12">
+          <h1 class="row align-items-center justify-content-center col-8" style="--i:2">محرك البحث العلمي
+            <span class="writeAnimate"></span>
+          </h1>
+          <p class="muted py-5 col-10" style="--i:2; color:#0ef;font-weight: bold;">
+            قم بإدخال نسب المرض التي لديك من حيث نسبه السكر، الوزن الخ... واضغط على زر إيجاد العلاج لرؤيه نسب العلاج
+            <span class="writeAnimate2"></span>
+          </p>
+       <!--   <div class="col-12 searchBarDiv"> 
+            <button class="search"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg></button>
+            <input type="text" class="col-lg-3" placeholder="ادخل كلمة البحث">
+          </div>-->
+          <form action="/" method="post" class="row align-items-center justify-content-center">
+        <div class="align-items-center justify-content-center row">  
+               <label for="SugerPersent">نسبة السكر في الدم</label>
+            <div class="row align-items-center justify-content-center">
+            <div class="input-group justify-content-center col-lg-2 col-12 col-md-5">
+              <span class="input-group-text col-md-3row" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-percent" viewBox="0 0 16 16">
+                  <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0zM4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                </svg>
+              </span>
+              <input type="number" name="SugerPersent" class="" id="SugerPersent" required >
+            </div>
+            </div>
+        
+        </div>
+    <!--    <div>
+              <label for="otherData">هل المريض مصاب باي مرض اخر ؟</label>
+                <select name="otherData" id="bool" class="col-lg-2 col-9 col-md-5" required>
+                  <option disabled selected>يرجي اختيار إجابة</option>
+                  <option value="true">نعم</option>
+                  <option value="false">لا</option>
+                </select>
+            </div>
+            <div>
+              <label for="sugreType">ما هو نوع السكر لدي المصاب ؟</label>
+              <select name="sugreType" id="sugreType" class="col-lg-2 col-9 col-md-5" required>
+                <option disabled selected>يرجي اختيار إجابة</option>
+                <option value="1">نوع أول</option>
+                <option value="2">نوع ثاني</option>
+              </select>
+            </div>-->
+            <div>
+              <label for="weight">وزن المصاب</label>
+              <input type="number" name="weight" placeholder="الوزن" class="col-lg-2 col-9 col-md-5 col-xl-2" required>
+            </div>
+          <div>
+              <button type="submit" class="col-lg-1 m-4 col-5" id="send">إيجاد العلاج
+              </button>
+            </div>
+          
+          </form>
+         </div>
+         <% if(err){ %>
+       
+          <p class="h5 col-lg-4 col-10 m-3 rounded"style="background-color:#dc3545 ;"><%= err %></p>  
+         <%} %>
+
+    </section>
+</div>
+  <div id='infoMsgBody'>
+
+  </div>
+    <script src="./styles/bootstrap.bundle.min.js"></script>
+
+   <script>
+     const info = document.getElementById("info");
+     const imb = document.getElementById("infoMsgBody");
+     info.onclick =()=>{
+       
+       imb.classList.add("infoMsgBody")
+       let closeMsg = document.createElement("div");
+       closeMsg.id = "closeMsg";
+     closeMsg.classList.add("closeMsg")
+       let closeBtn = document.createElement("button");
+       let closeImg = document.createElement("img");
+       closeImg.src="../images/exit.png"
+      closeBtn.id = 'closeBtn'
+       closeBtn.appendChild(closeImg)
+       imb.appendChild(closeMsg);
+       closeMsg.appendChild(closeBtn);
+       closeBtn.classList.add("p-4");
+       let imgMsg = document.createElement("div");
+       imgMsg.classList.add("msgImg","row","align-items-center","justify-content-center","py-5");
+       let img = document.createElement("img");
+       img.src ="../images/guide.jpg";
+       imb.appendChild(imgMsg)
+       imgMsg.appendChild(img)
+       console.log(imgMsg)
+       closeBtn.onclick = ()=>{
+         closeMsg.remove();
+         closeBtn.remove();
+         imgMsg.remove();
+         img.remove();
+         imb.classList.remove("infoMsgBody")
+       }
+     }
+
+   </script>
+</body>
+<footer class="row align-items-center justify-content-center">
+  <div style="background:Black" class="p-2">
+    <p>
+      En/Abdalrhman Mohamed Omar
+    </p>
+    <p>
+      Dr/Mariam Abo AlHassan saad
+    </p>
+  </div>
+</footer>
+</html>
