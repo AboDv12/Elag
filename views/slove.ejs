@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="pageContainer">
-        <nav class="nav p-4 row align-items-center justify-content-center " style="border-bottom: 1px solid gray;">
+        <nav class="nav p-4 row align-items-center justify-content-center " >
          <div class="row justify-content-start align-items-center col-lg-6 col-6 me-4">
            <p class="h2 col-lg-6">طبي</p>
          </div> 
@@ -17,14 +17,30 @@
            <a class="col-lg-6 col-12" href="https://wa.me/+201552392922">تواصل</a>
            <a class="col-lg-6 col-12" id="info" style="cursor: pointer;">معلومات</a>
           </div>
-        </nav> 
-        <section class="row align-items-center justify-content-center " >
+        </nav>
+        
+
            <div class="row justify-content-start align-items-end p-3">
+
         <a class="col-2"href='/' style='cursor: none;'>
             <img src="./images/back-50.png" alt="back img" id="back">
         </a>
             
            </div>
+      <!--  <footer class="row align-items-center mb-4 justify-content-center">
+
+<p class="h4">Created by</p>
+
+  <div  class="p-2">
+    <p>
+      En/Abdalrhman Mohamed Omar
+    </p>
+    <p>
+      Dr/Mariam Abo AlHassan saad
+    </p>
+  </div>
+</footer>-->
+        <section class="row align-items-center justify-content-center " >
             <p class="display-6">العلاج</p>
 
             <div class="result col-lg-5 col-10 " >
@@ -38,25 +54,13 @@
                 </div>
                 <div>
                     <p class="h2">العلاج : </p>
-                    <p class="h2"><%= data.slove %>ml</p>
+                    <p class="h2"><%= data.slove %>ml  من Aloe vera gel</p>
 
                 </div>
             </div>
             <div id='infoMsgBody'>
 
             </div>
-
-       <!--  <table class="col-lg-2">
-                <tr>
-                  <th>نسبة السكر</th>
-                  <th>العلاج بالملى</th>
-                </tr>
-                <tr>
-                    <td>50%</td>
-                    <td>100 Aloe vera gel</td>   
-                </tr>
-            </table>
-        -->   
 
    
         </section>
@@ -97,17 +101,7 @@
           }
         }
       </script>
-   </body>
+   </div>
 </body>
-<footer class="row align-items-center justify-content-center mt-5">
-    <div style="background:Black" class="p-2">
-      <p>
-         En/Abdalrhman Mohamed Omar
-      </p>
-      <p>
-        Dr/Mariam Abo AlHassan saad
-      </p>
-    </div>
-  </footer>
 
 </html>
